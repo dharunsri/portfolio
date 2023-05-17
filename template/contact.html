@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="icon" type="image/x-icon" href="../images/tab-icon.png">
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css" />
+
+</head>
+<body>
+  <header>
+    <div class="navbar">
+        <div class="logo">
+            <img class="logo-img" src="../images/me.jpg" height="40px" width="40px" />
+            <a href="../index.html">S. DHARUN</a>
+        </div>
+        <ul class="links">
+            <li class="item"><a class="item" href="../index.html">Home</a></li>
+            <li class="item"><a class="item" href="./about.html">About</a></li>
+            <li class="item" ><a class="item" href="../template/work.html">My Works</a></li>
+            <li class="item"><a class="item" href="../template/contact.html">Contact</a></li>
+        </ul>
+        <button id="action" class="action">Click Me!</button>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="../template/work.html">My Works</a></li>
+        <li><a href="../template/contact.html">Contact</a></li>
+    </div>
+</header>
+
+<script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const Icon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown')
+
+    toggleBtn.onclick = function(){
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+
+        Icon.classList = isOpen?'fa-solid fa-xmark':'fa-solid fa-bars'
+    }
+</script>
+
+<script src="../js/script.js"></script>
+<script src="../js/cursor.js"></script>
+
+<section id="contact">
+  <div class="contact-box">
+    <div class="contact-links">
+      <h2>CONTACT</h2>
+      <div class="links1">
+        <div class="link">
+          <a href="https://www.linkedin.com/in/dharun-s-801b0a206/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBOMuPFlMZuHj0sjNPVOdo-V0TCwnAmjWuIQ&usqp=CAU" alt="linkedin"></a>
+        </div>
+        <div class="link">
+          <a href="https://github.com/dharunsri" target="_blank"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="github" style="border-radius: 6px;"></a>
+        </div>
+        <div class="link">
+          <a href="https://hashtagtechnophile.com/" target="_blank"><img src="https://static.vecteezy.com/system/resources/previews/003/731/316/original/web-icon-line-on-white-background-image-for-web-presentation-logo-icon-symbol-free-vector.jpg" alt="codepen" style="border-radius: 6px;"></a>
+        </div>
+        <div class="link">
+          <a href="mailto:sdharun001@gmail.com" target="_blank"><img src="https://static.vecteezy.com/system/resources/previews/006/697/974/original/mail-email-icon-template-black-color-editable-mail-email-icon-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg" alt="email" style="border-radius: 6px;"></a>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form-wrapper">
+      <form id="contact-form" method="post" action="https://formspree.io/f/mjvdzpyl">
+        <div class="form-item">
+          <input type="text" name="sender" id="name" required>
+          <label>Name:</label>
+        </div>
+        <div class="form-item">
+          <input type="email" name="email" id="email" required>
+          <label>Email:</label>
+        </div>
+        <div class="form-item">
+          <textarea class="" name="message" id="message" required></textarea>
+          <label>Message:</label>
+        </div>
+        <button type="submit" id="submitBtn" class="submit-btn">Send <i class="fa-solid fa-paper-plane"></i></button>  
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    var requestBody = {
+      name: name,
+      email: email,
+      message: message
+    };
+
+    fetch('https://formspree.io/f/mjvdzpyl', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(requestBody)
+    })
+      .then(function(response) {
+        if (response.ok) {
+          console.log('Email sent successfully');
+          alert('Email sent successfully!');
+          document.getElementById('contact-form').reset();
+        } else {
+          console.error('Error sending email:', response.status, response.statusText);
+          alert('Error sending email!');
+        }
+      })
+      .catch(function(error) {
+        console.error('Error sending email:', error);
+        alert('Error sending email!');
+      });
+  });
+</script>
+
+
+
+</body>
+</html>

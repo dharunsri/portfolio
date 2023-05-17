@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Works</title>
+    <link rel="icon" type="image/x-icon" href="../images/tab-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/work.css" />
+    
+    
+
+</head>
+<body>
+    <header style="top: 0; margin-top: 0;">
+        <div class="navbar">
+            <div class="logo">
+                <a href="../index.html">S. DHARUN</a>
+            </div>
+            <ul class="links">
+                <li class="item"><a class="item" href="../index.html">Home</a></li>
+                <li class="item"><a class="item"href="./about.html">About</a></li>
+                <li class="item"><a class="item" href="../template/work.html">My Works</a></li>
+                <li class="item"><a class="item" href="../template/contact.html">Contact</a></li>
+            </ul>
+            <button id="action" class="action">Click Me!</button>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="../template/work.html">My Works</a></li>
+            <li><a href="../template/contact.html">Contact</a></li>
+        </div>
+    </header>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const Icon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown')
+
+        toggleBtn.onclick = function(){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            Icon.classList = isOpen?'fa-solid fa-xmark':'fa-solid fa-bars'
+        }
+    </script>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/cursor.js"></script>
+
+<div class="main">
+    <h1 class="work-head"><i class="fa-solid fa-code"></i> My Projects & Coding Workouts <i class="fa-solid fa-code"></i> </h1>
+    <ul class="cards">
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="https://gatefy.com/wp-content/uploads/2021/02/Phishing-attacks-use-links-of-up-to-1000-characters.jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">Web Phishing Detection</h2>
+            <p class="card_text">Detecting the phishing URLs using machine learning. Created with python.</p>
+            <a href="https://github.com/IBM-EPBL/IBM-Project-2753-1658482378" target="_blank"><button class="btn card_btn">Go to repository <i class="fa-brands fa-github"></i></button></a>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="https://images.prabhasakshi.com/2022/2/mobile-operating-system_large_1838_23.jpeg"></div>
+          <div class="card_content">
+            <h2 class="card_title">Multi Purpose Student App</h2>
+            <p class="card_text">An android app in which students can able to create the TimeTable, set remainders, store their event details for their convenience. Created with java.</p>
+            <a href="https://github.com/dharunsri/TimeTable" target="_blank"><button class="btn card_btn">Go to repository <i class="fa-brands fa-github"></i></button></a>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="https://iformatlogic.com/photo/plugin/article/2019/1576136631_1-org.jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">College Mess Web-App</h2>
+            <p class="card_text">Students and Staffs can able to book their mess token and pay via this web-app. Created with react js.</p>
+            <a href="https://github.com/dharunsri/kncet-mess" target="_blank"><button class="btn card_btn">Go to repository <i class="fa-brands fa-github"></i></button></a>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="https://media.istockphoto.com/id/1206796363/photo/ai-machine-learning-hands-of-robot-and-human-touching-on-big-data-network-connection.jpg?s=612x612&w=0&k=20&c=xIX5Bz7h50B83cCZG_gXkyZSOu-mG93DtOcNK7RNEAo="></div>
+          <div class="card_content">
+            <h2 class="card_title">AI Virtual Mouse </h2>
+            <p class="card_text">Even the mouse isn't present or Touchpad isn't working still user can able use the mouse with their hand gestures. Created with python.</p>
+            <a href="https://github.com/dharunsri/AI_Virtual_Mouse" target="_blank"><button class="btn card_btn">Go to repository <i class="fa-brands fa-github"></i></button></a>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="https://cdn.wallpapersafari.com/56/52/ayzfVp.jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">Python Programming</h2>
+            <p class="card_text">I took a journey of python learning where I learned through practical coding experience.</p>
+            <a href="https://github.com/dharunsri/Python_Journey" target="_blank"><button class="btn card_btn">Go to repository <i class="fa-brands fa-github"></i></button></a>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="https://images.ctfassets.net/tldhjvq55hjd/3NezrHfHD8sBg8Dj8B4ZqQ/5e387cbb7c9cec63efc6ef9a17a087a6/Java_17_blog_post.webp?fm=jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">Java Programming</h2>
+            <p class="card_text">Learned Java programming by practicing lot of programming concepts and solved various problem statements.</p>
+            <a href="https://github.com/dharunsri/Java_Programming" target="_blank"><button class="btn card_btn">Go to repository <i class="fa-brands fa-github"></i></button></a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+    
+</body>
+</html>

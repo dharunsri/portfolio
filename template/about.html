@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Me</title>
+  <link rel="icon" type="image/x-icon" href="../images/tab-icon.png">
+  <link rel="stylesheet" href="../css/parallax.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+        <div class="logo">
+            <img class="logo-img" src="../images/me.jpg" height="40px" width="40px"/>
+            <a href="../index.html">S. DHARUN</a>
+        </div>
+        <ul class="links">
+            <li class="item"><a class="item" href="../index.html">Home</a></li>
+            <li class="item"><a class="item" href="./about.html">About</a></li>
+            <li class="item"><a class="item" href="../template/work.html">My Works</a></li>
+            <li class="item"><a class="item" href="../template/contact.html">Contact</a></li>
+        </ul>
+        <button id="action" class="action">Click Me!</button>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="../template/work.html">My Works</a></li>
+        <li><a href="../template/contact.html">Contact</a></li>
+    </div>
+</header>
+
+<script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const Icon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown')
+
+    toggleBtn.onclick = function(){
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+
+        Icon.classList = isOpen?'fa-solid fa-xmark':'fa-solid fa-bars'
+    }
+</script>
+<script src="../js/script.js"></script>
+<script src="../js/cursor.js"></script>
+
+<div class="scroll">
+<div class="details">
+  <section class="section">
+    <img src="../images/me.jpg" height="20%" style="border-radius: 100%; margin-bottom: 2%;">
+    <h2>I'M S. DHARUN</h2>
+    <p>I am a passionate programmer who consistently involve myself in programming. And due to my inquisitive I will always like to solve new challenges by keep on learning.</p>
+    <p>Want to <a id="contact" href="../template/contact.html" ><u>contact me?</a></u></p>
+  </section>
+  <section class="section">
+    <h2 style="margin-bottom: 3%;">TECHNICAL KNOWLEDGE</h2>
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="../images/python.png" alt="Image 1" height="100px" width="100px">
+      </div>
+      <div class="grid-item">
+        <img src="../images/java.png" alt="Image 2" height="100px" width="100px">
+      </div>
+      <div class="grid-item">
+        <img src="../images/c.png" alt="Image 3" height="100px" width="100px">
+      </div>
+      <div class="grid-item">
+        <img src="../images/html.png" alt="Image 3" height="100px" width="100px">
+      </div>
+      <div class="grid-item">
+        <img src="../images/css-3.png" alt="Image 3" height="100px" width="100px">
+      </div>
+      <div class="grid-item">
+        <img src="../images/js.png" alt="Image 3" height="100px" width="100px">
+      </div>
+      <div class="grid-item">
+        <img src="../images/xd.png" alt="Image 3" height="100px" width="100px">
+      </div>
+      <div class="grid-item">
+        <img src="../images/android.png" alt="Image 3" height="100px" width="100px">
+      </div>
+      <!-- Add more grid items as needed -->
+    </div>
+    
+  </section>
+  <section class="section">
+    <h1 class="fact-title" style="margin-bottom: 5%;">Interesting Facts</h1>
+    <ul>
+      <li class="fact1">&#10004; &nbsp; I am a Co-founder of <u><a class="fact" href="https://hashtagtechnophile.com/" target="_blank">"Hashtag Technophile."</a></u></li>
+      <li class="fact1">&#10004; &nbsp; I am a Designer & Content Writer at <u><a class="fact" href="https://hashtagtechnophile.com/" target="_blank">"Hashtag Technophile."</a></u></li>
+      <li class="fact1">&#10004; &nbsp; I am a <u><a class="fact" href="https://www.instagram.com/the_.distracter/" target="_blank">"Quotes Creator"</a></u></li>
+    </ul>
+  </section>
+</div>
+</div>
+
+<script src="../js/scroll.js"></script>
+
+</body>
+</html>
